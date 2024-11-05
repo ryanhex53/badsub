@@ -1,0 +1,364 @@
+﻿1
+00:00:01,640 --> 00:00:06,520
+This is a Raspberry Pi 5.
+It costs about $100 and it kind of
+
+2
+00:00:06,520 --> 00:00:08,160
+just looks like a small chunk of
+plastic.
+
+3
+00:00:08,160 --> 00:00:14,160
+But it is a full computer with a
+CPU, GPU, RAM, HDMI ports,
+
+4
+00:00:14,160 --> 00:00:18,000
+USB ports, and we could use
+this just as a normal computer or
+
+5
+00:00:18,000 --> 00:00:20,200
+as a home server to self host web
+apps.
+
+6
+00:00:20,200 --> 00:00:23,760
+We can plug in cameras here and an
+AI accelerator chip here and do
+
+7
+00:00:23,760 --> 00:00:26,720
+some really cool things with
+computer vision and these pins let
+
+8
+00:00:26,720 --> 00:00:29,280
+us control anything in the real
+world with code.
+
+9
+00:00:29,280 --> 00:00:31,270
+So as a programmer you can.
+
+10
+00:00:31,270 --> 00:00:34,550
+Absolutely anything with this to
+get started, we'll need a hard
+
+11
+00:00:34,550 --> 00:00:38,830
+drive like this SSD, or a cheaper,
+easier option is just to use an SD
+
+12
+00:00:38,830 --> 00:00:40,310
+card.
+And although it's not completely
+
+13
+00:00:40,310 --> 00:00:43,590
+necessary, we'll want an active
+cooler so that the pi doesn't get
+
+14
+00:00:43,590 --> 00:00:45,390
+too hot.
+Now this doesn't have an operating
+
+15
+00:00:45,390 --> 00:00:48,030
+system installed on it yet,
+so I'm going to take out the SD
+
+16
+00:00:48,030 --> 00:00:49,950
+card and plug this into my
+computer.
+
+17
+00:00:49,950 --> 00:00:52,390
+And there's a few Linux
+distributions that we can choose
+
+18
+00:00:52,390 --> 00:00:55,430
+from, but there's also the
+official Raspberry Pi OS, which
+
+19
+00:00:55,430 --> 00:00:57,750
+is a port of Debian.
+And we can install the desktop
+
+20
+00:00:57,750 --> 00:01:00,830
+version and treat this like a
+normal desktop or we can install
+
+21
+00:01:00,830 --> 00:01:04,310
+the lite version and treat it more like a
+Linux server and we can set up the
+
+22
+00:01:04,310 --> 00:01:07,390
+host name and the username right
+now so that we can log into the Pi
+
+23
+00:01:07,390 --> 00:01:09,990
+using SSH.
+Then once that's done we can plug
+
+24
+00:01:09,990 --> 00:01:13,230
+this back into the Raspberry Pi
+plug in the Raspberry Pi and then
+
+25
+00:01:13,230 --> 00:01:15,510
+log into it from my computer using
+SSH.
+
+26
+00:01:15,510 --> 00:01:19,670
+And since this is a new Linux setup
+we'll update and upgrade and now I
+
+27
+00:01:19,670 --> 00:01:23,870
+want to create and host a really
+basic web app so I'm going to use a
+
+28
+00:01:23,870 --> 00:01:29,150
+really basic web framework and then
+I can run this and I should be able
+
+29
+00:01:29,150 --> 00:01:31,430
+to visit this web app on my local.
+
+30
+00:01:31,430 --> 00:01:37,030
+Network using the Raspberry Pi host
+name dot local at port 3000.
+
+31
+00:01:37,030 --> 00:01:40,470
+So this is a Nextjs app running off
+my Raspberry Pi that I can see in
+
+32
+00:01:40,470 --> 00:01:44,070
+the browser and I can come back in
+here and I could start editing
+
+33
+00:01:44,070 --> 00:01:49,150
+these files with vim.
+So I could just delete most of this
+
+34
+00:01:49,150 --> 00:01:53,590
+boilerplate code and I just put in
+a nice little header here and then
+
+35
+00:01:53,590 --> 00:01:57,230
+this should just update and we
+should see this new homepage
+
+36
+00:01:57,230 --> 00:02:00,150
+running from the Raspberry Pi.
+But I would personally much rather
+
+37
+00:02:00,150 --> 00:02:01,177
+use VS Code.
+
+38
+00:02:01,377 --> 00:02:06,190
+So I can use the remote SSH extension
+and now I'm using VS Code from my
+
+39
+00:02:06,190 --> 00:02:09,870
+laptop but modifying the code files
+on my Raspberry Pi.
+
+40
+00:02:09,870 --> 00:02:13,510
+And I can install a database on the
+Raspberry Pi and code out a full
+
+41
+00:02:13,510 --> 00:02:16,350
+web app right now, but I'm
+just going to display some system
+
+42
+00:02:16,350 --> 00:02:19,990
+information about the Raspberry Pi.
+So I've got some code here that
+
+43
+00:02:19,990 --> 00:02:23,470
+will tell us the CPU usage,
+the temperature, and some of
+
+44
+00:02:23,470 --> 00:02:27,990
+the other system details just using
+the OS and child process library.
+
+45
+00:02:27,990 --> 00:02:31,070
+And if you want to follow along,
+I'll leave a link to all of the
+
+46
+00:02:31,070 --> 00:02:31,630
+code and
+
+47
+00:02:31,630 --> 00:02:34,750
+Steps in the description and then
+I'm just going to make a new stats
+
+48
+00:02:34,750 --> 00:02:38,190
+page that will just display that
+system information in React
+
+49
+00:02:38,190 --> 00:02:40,310
+components.
+So if I head over to that stats
+
+50
+00:02:40,310 --> 00:02:43,510
+page, we can now see a bunch
+of information about the Raspberry
+
+51
+00:02:43,510 --> 00:02:46,150
+Pi system, which is kind of
+cool, but it's still just running
+
+52
+00:02:46,150 --> 00:02:49,670
+on my private local network.
+And really I want to expose this to
+
+53
+00:02:49,670 --> 00:02:52,430
+the public Internet.
+And there's a few ways we can do
+
+54
+00:02:52,430 --> 00:02:54,470
+this.
+We could set up port forwarding on
+
+55
+00:02:54,470 --> 00:02:59,110
+our home router and open up our
+firewall to let in Https://traffic
+
+56
+00:02:59,110 --> 00:03:01,830
+from the public Internet, or
+we can do something.
+
+57
+00:03:01,830 --> 00:03:06,790
+A little easier and more secure and
+use Cloudflare tunnels where the
+
+58
+00:03:06,790 --> 00:03:11,030
+Raspberry Pi will tunnel to cloud
+flare and then cloud flare handles
+
+59
+00:03:11,030 --> 00:03:14,070
+all of the traffic over the public
+Internet and this service is
+
+60
+00:03:14,070 --> 00:03:16,510
+completely free.
+So I'm going to head over to
+
+61
+00:03:16,510 --> 00:03:21,070
+Cloudflare Tunnels and then we can
+add a tunnel using Cloudflare D
+
+62
+00:03:21,070 --> 00:03:25,230
+This will be my Pi tunnel.
+And since Raspberry Pi OS is just
+
+63
+00:03:25,230 --> 00:03:28,550
+Debbie and Linux, we can copy
+this code snippet into the
+
+64
+00:03:28,550 --> 00:03:31,870
+Raspberry Pi and when we run this,
+it will allow the pi to.
+
+65
+00:03:31,870 --> 00:03:33,830
+Connect to Cloudflare to tunnel to
+Cloudflare.
+
+66
+00:03:33,830 --> 00:03:37,630
+Then we can set up a domain.
+So I already have a domain on
+
+67
+00:03:37,630 --> 00:03:38,710
+Cloudflare.
+I'm going to use that.
+
+68
+00:03:38,710 --> 00:03:42,870
+I'm going to set the sub domain to
+be Rossby and this will be for HTTP
+
+69
+00:03:42,870 --> 00:03:46,110
+on localhost 3000 since that's
+where the NextJs app is running
+
+70
+00:03:46,110 --> 00:03:49,470
+and I can save that tunnel.
+So now from anywhere in the world,
+
+71
+00:03:49,470 --> 00:03:52,550
+I should be able to go to raspy dot
+sam dot
+
+72
+00:03:52,550 --> 00:03:56,710
+org and see my website and I can go
+to that stats page and see all of
+
+73
+00:03:56,710 --> 00:04:01,550
+the stats from a web app that is
+being hosted from my home on a very
+
+74
+00:04:01,550 --> 00:04:02,374
+cheap computer
